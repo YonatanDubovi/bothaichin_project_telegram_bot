@@ -99,7 +99,7 @@ def location_handler(update: Update, context: CallbackContext):
 def recommended_handler(update: Update, context: CallbackContext):
     dishes_keyboard = [[KeyboardButton("🔙 Back")]]
     if dataSource.is_client_new(context.user_data["CLIENT_NUMBER"]):
-        best_sellers = dataSource.get_top_sellers()
+        best_sellers = dataSource.get_favorite_dishes()
         for dish in best_sellers:
             dishes_keyboard_sub = [KeyboardButton("🥡 " + dish)]
             dishes_keyboard.append(dishes_keyboard_sub)
