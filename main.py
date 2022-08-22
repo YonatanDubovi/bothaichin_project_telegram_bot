@@ -45,7 +45,7 @@ def something_else_handler(update, context):
 
 
 def call_handler(update, context):
-    buttons = [KeyboardButton("🆕 Undo 🔙")]
+    buttons = [[KeyboardButton("🆕 Undo 🔙")]]
     context.bot.send_message(chat_id=update.effective_chat.id, text="Dial the number: 04-953-3333",
                              reply_markup=ReplyKeyboardMarkup(buttons))
 
