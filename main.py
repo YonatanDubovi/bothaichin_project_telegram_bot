@@ -322,6 +322,7 @@ if __name__ == '__main__':
     updater.dispatcher.add_handler(MessageHandler(Filters.regex("My recommended dishes🙋"), recommended_handler))
     updater.dispatcher.add_handler(MessageHandler(Filters.regex("The most favorite🔝"), favorite_handler))
     updater.dispatcher.add_handler(MessageHandler(Filters.regex("Something else  🤷‍♂"), something_else_handler))
+    updater.dispatcher.add_handler(MessageHandler(Filters.regex("Call us 📞"), call_handler))
     updater.dispatcher.add_handler(MessageHandler(Filters.regex("The dishes that brought in the least money this "
                                                                 "month📉"),
                                                   weakest_handler))
